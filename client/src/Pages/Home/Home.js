@@ -21,7 +21,7 @@ const Home = () => {
   }, []);
 
   return (
-    <section className="container px-16 lg:px-24 my-12">
+    <section className="container px-4 lg:px-24 my-12">
       <div>
         <h2 className="text-3xl font-bold text-center">Trending</h2>
       </div>
@@ -48,13 +48,13 @@ const Home = () => {
                     className="object-fill"
                   />
                 </figure>
-                <div className="card-body basis-1/2">
-                    <p className="flex font-bold basis-[40%]">
-                      Business, Travel -{" "}
-                      <span className="font-normal text-[#ADADAD]">
-                        {blog?.publish_date}
-                      </span>
-                    </p>
+                <div className="card-body basis-1/2 p-0">
+                  <p className="flex font-bold basis-[40%] mt-4 md:mt-0">
+                    Business, Travel -{" "}
+                    <span className="font-normal text-[#ADADAD]">
+                      {blog?.publish_date}
+                    </span>
+                  </p>
                   <h2 className="card-title text-3xl font-bold my-3">
                     {blog?.blog_title}
                   </h2>
