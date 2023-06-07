@@ -21,7 +21,7 @@ const Home = () => {
   }, []);
 
   return (
-    <section className="container px-4 lg:px-24 my-12">
+    <section className="container px-4 md:px-12 lg:px-24 my-12">
       <div>
         <h2 className="text-3xl font-bold text-center">Trending</h2>
       </div>
@@ -36,32 +36,32 @@ const Home = () => {
             delay: 3000,
           }}
           modules={[Pagination, Autoplay]}
-          className="mySwiper"
+          className="mySwiper lg:h-[70vh]"
         >
           {blogs?.map((blog) => (
             <SwiperSlide key={blog?.id}>
-              <div className="card lg:card-side bg-base-100 mt-12 cursor-pointer">
+              <div className="card lg:card-side bg-base-100 mt-12 cursor-pointer items-center justify-center">
                 <figure className="basis-1/2">
                   <img
                     src={blog?.blog_img}
                     alt="Album"
-                    className="object-fill"
+                    className="object-fill rounded"
                   />
                 </figure>
-                <div className="card-body basis-1/2 p-0">
-                  <p className="flex font-bold basis-[40%] mt-4 md:mt-0">
+                <div className="card-body basis-1/2 p-0 lg:px-6">
+                  <div className="flex font-bold mt-4 lg:mt-0">
                     Business, Travel -{" "}
                     <span className="font-normal text-[#ADADAD]">
                       {blog?.publish_date}
                     </span>
-                  </p>
+                  </div>
                   <h2 className="card-title text-3xl font-bold my-3">
                     {blog?.blog_title}
                   </h2>
-                  <p className="text-[#ADADAD] text-sm">
-                    {blog?.desc.slice(0, 450) + "..."}
-                  </p>
-                  <div className="flex gap-3 items-center">
+                  <div className="text-[#ADADAD] text-sm">
+                    {blog?.desc.slice(0, 250) + "..."}
+                  </div>
+                  <div className="flex gap-3 items-center mt-4">
                     <div>
                       <img
                         src={blog?.author_img}

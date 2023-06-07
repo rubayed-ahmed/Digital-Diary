@@ -3,7 +3,7 @@ import {Link} from "react-router-dom"
 
 const Navbar = () => {
   return (
-    <section className="navbar bg-base-100 overflow-hidden lg:px-32 border">
+    <section className="navbar bg-base-100 overflow-hidden md:px-12 lg:px-32 border">
       <div className="navbar-start">
         <div className="form-control">
           <input
