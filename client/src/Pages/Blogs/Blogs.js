@@ -15,7 +15,7 @@ const Blogs = () => {
     <section className="container px-4 md:px-12 lg:px-32 my-12">
       <div className="grid grid-cols-1 lg:grid-cols-3 md:gap-6">
         {blogs?.map((blog) => (
-          <Link className="card bg-base-100 rounded-lg mt-12 cursor-pointer" to={`/blog/${blog?._id}`} key={blog?._id}>
+          <Link className="card bg-base-100 rounded-lg mt-12 cursor-pointer" to={`/blogs/${blog?._id}`} key={blog?._id}>
             <figure>
               <img
                 src={blog?.blog_img}

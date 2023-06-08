@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import fetchBlogsData from "../../redux/thunk/fetchBlogs";
+import {Link} from "react-router-dom"
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -55,9 +56,9 @@ const Home = () => {
                       {blog?.publish_date}
                     </span>
                   </div>
-                  <h2 className="card-title text-3xl font-bold my-3">
+                  <Link to={`/blogs/${blog?._id}`} className="card-title text-3xl font-bold my-3">
                     {blog?.blog_title}
-                  </h2>
+                  </Link>
                   <div className="text-[#ADADAD] text-sm">
                     {blog?.desc.slice(0, 250) + "..."}
                   </div>

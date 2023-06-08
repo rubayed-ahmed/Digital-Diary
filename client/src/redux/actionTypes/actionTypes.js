@@ -1,1 +1,2 @@
 export const LOAD_BLOG = "LOAD_BLOG";
+export const LOAD_BLOG_DETAILS = "LOAD_BLOG_DETAILS"
