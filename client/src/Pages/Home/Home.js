@@ -39,7 +39,7 @@ const Home = () => {
           className="mySwiper lg:h-[70vh]"
         >
           {blogs?.map((blog) => (
-            <SwiperSlide key={blog?.id}>
+            <SwiperSlide key={blog?._id}>
               <div className="card lg:card-side bg-base-100 mt-12 cursor-pointer items-center justify-center">
                 <figure className="basis-1/2">
                   <img

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import {Link} from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux";
 import fetchBlogsData from "../../redux/thunk/fetchBlogs";
 
@@ -14,7 +15,7 @@ const Blogs = () => {
     <section className="container px-4 md:px-12 lg:px-32 my-12">
       <div className="grid grid-cols-1 lg:grid-cols-3 md:gap-6">
         {blogs?.map((blog) => (
-          <div className="card bg-base-100 rounded-lg mt-12 cursor-pointer ">
+          <Link className="card bg-base-100 rounded-lg mt-12 cursor-pointer" to={`/blog/${blog?._id}`} key={blog?._id}>
             <figure>
               <img
                 src={blog?.blog_img}
@@ -46,7 +47,7 @@ const Blogs = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>
