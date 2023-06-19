@@ -4,6 +4,7 @@ import Home from "../Pages/Home/Home";
 import Blogs from "../Pages/Blogs/Blogs";
 import HomeLayout from "../Pages/HomeLayout/HomeLayout";
 import BlogDetails from "../Pages/Blogs/BlogDetails";
+import AdminReg from "../AdminPanel/Authentication/AdminReg/AdminReg";
 
 const routes = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ const routes = createBrowserRouter([
                 path: "/blogs/:id",
                 element: <BlogDetails/>,
                 loader: ({ params }) => fetch(`http://localhost:5000/blogs/${params.id}`)
+            },
+            {
+                path: "/admin/register",
+                element: <AdminReg/>,
             }
         ]
     }
